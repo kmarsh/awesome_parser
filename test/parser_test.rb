@@ -30,4 +30,18 @@ class UrlTest < Minitest::Test
       line: "    * [bleve](https://github.com/blevesearch/bleve) - A modern text indexing library for go.\n"
     }
   end
+
+  def test_items_with_talks
+    text = File.open("test/fixtures/JanVanRyswyck/awesome-talks/README.md").read
+    parser = AwesomeParser::Parser.new(text)
+    parser.parse!
+
+    assert_includes parser.items, {
+      url: "http://www.youtube.com/watch?v=pMGY9ViIGNU",
+      title: "Functional Principles for Object-Oriented Developers",
+      description: "by **Jessica Kerr** [51:13]",
+      heading: "Functional Programming",
+      line: "* [Functional Principles for Object-Oriented Developers](http://www.youtube.com/watch?v=pMGY9ViIGNU) by **Jessica Kerr** [51:13]\n"
+    }
+  end
 end

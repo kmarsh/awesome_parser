@@ -15,7 +15,7 @@ module AwesomeParser
         when /^\#+ ?(.+)/
           heading = $1
 
-        when /\[(.+)\]\((.+)\) - (.+)/
+        when /\[(.+)\]\((.+)\) ?-? ?(.+)/
           items << {
             url: $2,
             title: $1,

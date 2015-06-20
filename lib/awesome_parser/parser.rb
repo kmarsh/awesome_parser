@@ -8,11 +8,11 @@ module AwesomeParser
     end
 
     def parse!
-      @text.each_line do |line|
-        heading = nil
+      heading = nil
 
+      @text.each_line do |line|
         case line
-        when /^\# ?(.+)/
+        when /^\#+ ?(.+)/
           heading = $1
 
         when /\[(.+)\]\((.+)\) - (.+)/

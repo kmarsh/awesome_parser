@@ -12,7 +12,7 @@ class UrlTest < Minitest::Test
       url: "https://github.com/thoughtbot/griddler",
       title: "Griddler",
       description: "Simplify receiving email in Rails",
-      heading: nil,
+      heading: "Email",
       line: "* [Griddler](https://github.com/thoughtbot/griddler) - Simplify receiving email in Rails\n"
     }
   end
@@ -26,7 +26,7 @@ class UrlTest < Minitest::Test
       url: "https://github.com/blevesearch/bleve",
       title: "bleve",
       description: "A modern text indexing library for go.",
-      heading: nil,
+      heading: "Database Drivers",
       line: "    * [bleve](https://github.com/blevesearch/bleve) - A modern text indexing library for go.\n"
     }
   end

@@ -2,11 +2,6 @@
 require 'awesome_parser'
 require 'json'
 
-require 'awesome_print'
-
-# List of Lists
-# https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md
-
 awesome_parser = AwesomeParser::Parser.new(ARGF.read)
 awesome_parser.parse!
 

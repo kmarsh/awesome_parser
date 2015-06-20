@@ -21,11 +21,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get a particular awesome list, convert to JSON
+
+    USER=sindresorhus
+    REPO=awesome-nodejs
+    curl -H "Accept: application/vnd.github.VERSION.raw" https://api.github.com/repos/$USER/$REPO/readme | ruby -Ilib bin/awesome2json
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/awesome_parser/fork )
+1. Fork it ( https://github.com/willcodeforfoo/awesome_parser/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

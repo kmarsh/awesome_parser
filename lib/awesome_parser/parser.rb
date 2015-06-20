@@ -17,8 +17,8 @@ module AwesomeParser
 
         when /\[(.+)\]\((.+)\) - (.+)/
           items << {
-            url: $1,
-            title: $2,
+            url: $2,
+            title: $1,
             description: $3,
             heading: heading,
             line: line,
